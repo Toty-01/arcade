@@ -3,14 +3,16 @@ import MovingDirection from "./MovingDirection.js";
 
 export default class EnemyController {
   enemyMap = [
-    [4, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 4],
-    [4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4],
-    [4, 2, 2, 2, 3, 3, 3 ,3, 3, 3 ,2, 2, 2, 4],
-    [4, 2, 2, 2, 3, 3, 3 ,3, 3, 3 ,2, 2, 2, 4],
-    [4, 2, 2, 2, 3, 3, 3, 3, 3, 3, 2, 2, 2, 4],
-    [4, 2, 2, 2, 3, 3, 3 ,3, 3, 3 ,2, 2, 2, 4],
-    [4, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 4],
-    [4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4],
+    [4, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 1, 4],
+    [4, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 1, 4],
+    [4, 1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 1, 4],
+    [4, 1, 2, 2, 2, 3, 3, 3 ,3, 3, 3 ,2, 2, 2, 1, 4],
+    [4, 1, 2, 2, 2, 3, 3, 3 ,3, 3, 3 ,2, 2, 2, 1, 4],
+    [4, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 4],
+    [4, 1, 2, 2, 2, 3, 3, 3 ,3, 3, 3 ,2, 2, 2, 1, 4],
+    [4, 1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 1, 4],
+    [4, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 1, 4],
+    [4, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 1, 4],
   ];
   enemyRows = [];
 
@@ -19,9 +21,9 @@ export default class EnemyController {
   yVelocity = 0;
   defaultXVelocity = 3;
   defaultYVelocity = 2;
-  moveDownTimerDefault = 20;
+  moveDownTimerDefault = 10;
   moveDownTimer = this.moveDownTimerDefault;
-  fireBulletTimerDefault = 40;
+  fireBulletTimerDefault = 30;
   fireBulletTimer = this.fireBulletTimerDefault;
 
   constructor(canvas, enemyBulletController, playerBulletController) {
@@ -30,7 +32,7 @@ export default class EnemyController {
     this.playerBulletController = playerBulletController;
 
     this.enemyDeathSound = new Audio("sounds/explode.wav");
-    this.enemyDeathSound.volume = 0.3;
+    this.enemyDeathSound.volume = 0.5;
 
     this.createEnemies();
   }

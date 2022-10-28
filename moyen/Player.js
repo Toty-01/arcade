@@ -7,7 +7,7 @@ export default class Player {
 
   constructor(canvas, velocity, bulletController, rotation) {
     this.canvas = canvas;
-    this.velocity = velocity;
+    this.velocity = velocity + 2;
     this.bulletController = bulletController;
     this.rotation = rotation;
 

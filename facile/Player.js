@@ -4,14 +4,10 @@ export default class Player {
   shootPressed = false;
   pausedPress = false;
 
-
   constructor(canvas, velocity, bulletController, rotation) {
     this.canvas = canvas;
     this.velocity = velocity;
     this.bulletController = bulletController;
-    this.rotation = rotation;
-
-    rotation = 0
 
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height - 75;
@@ -63,9 +59,6 @@ export default class Player {
     }
     if (event.code == "Space") {
       this.shootPressed = true;
-    }
-    if (event.code == "p") {
-      this.pausedPress = true;
     }
   };
 

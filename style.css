@@ -1,0 +1,28 @@
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  background-color: black;
+}
+h1 {
+  text-align: center;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  font-size: 5vw;
+  color: aliceblue;
+}
+.levels {
+  display: flex;
+  flex-direction: column;
+}
+.levels > a {
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  color: white;
+  padding-top: 2rem;
+  font-size: 4vh;
+}

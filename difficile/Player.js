@@ -2,14 +2,11 @@ export default class Player {
   rightPressed = false;
   leftPressed = false;
   shootPressed = false;
-  pausedPress = false;
-
 
   constructor(canvas, velocity, bulletController) {
     this.canvas = canvas;
     this.velocity = velocity + 4;
     this.bulletController = bulletController;
-
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height - 75;
     this.width = 54;
@@ -20,7 +17,7 @@ export default class Player {
     document.addEventListener("keydown", this.keydown);
     document.addEventListener("keyup", this.keyup);
   }
-
+    
   draw(ctx) {
     if (this.shootPressed) {
       this.bulletController.shoot(this.x + this.width / 2, this.y, 4, 10);
@@ -28,12 +25,6 @@ export default class Player {
     this.move();
     this.collideWithWalls();
     ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-  }
-
-  pause() {
-    if (this.pausedPress) {
-      alert('jeu mis en pause');
-    }
   }
 
   collideWithWalls() {
@@ -65,9 +56,6 @@ export default class Player {
     if (event.code == "Space") {
       this.shootPressed = true;
     }
-    if (event.code == "p") {
-      this.pausedPress = true;
-    }
   };
 
   keyup = (event) => {
@@ -79,9 +67,6 @@ export default class Player {
     }
     if (event.code == "Space") {
       this.shootPressed = false;
-    }
-    if (event.code == "p") {
-      this.paused = false;
     }
   };
 }

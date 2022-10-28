@@ -23,6 +23,9 @@ const player = new Player(canvas, 3, playerBulletController);
 let isGameOver = false;
 let didWin = false;
 
+const audio = document.createElement('audio');
+    audio.setAttribute('src','./sounds/gameOver.mp3');
+
 function game() {
   checkGameOver();
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -41,7 +44,7 @@ function displayGameOver() {
     let textOffset = didWin ? 3.5 : 5;
 
     ctx.fillStyle = "white";
-    ctx.font = "70px Arial";
+    ctx.font = "10vw  Arial";
     ctx.fillText(text, canvas.width / textOffset, canvas.height / 2);
   }
 }
@@ -53,10 +56,12 @@ function checkGameOver() {
 
   if (enemyBulletController.collideWith(player)) {
     isGameOver = true;
+    audio.play();
   }
 
   if (enemyController.collideWith(player)) {
     isGameOver = true;
+    audio.play();
   }
 
   if (enemyController.enemyRows.length === 0) {

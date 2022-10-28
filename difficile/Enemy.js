@@ -1,9 +1,12 @@
+var myAudio = document.createElement("audio");
+myAudio.src = "./sounds/backgroundMusic.wav";   
+ 
 export default class Enemy {
   constructor(x, y, imageNumber) {
     this.x = x;
     this.y = y;
-    this.width = 44;
-    this.height = 32;
+    this.width = 40;
+    this.height = 30;
 
     this.image = new Image();
     this.image.src = `images/enemy${imageNumber}.png`;
@@ -14,6 +17,7 @@ export default class Enemy {
   }
 
   move(xVelocity, yVelocity) {
+    myAudio.play();
     this.x += xVelocity;
     this.y += yVelocity;
   }
