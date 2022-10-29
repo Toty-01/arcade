@@ -5,6 +5,7 @@ export default class EnemyController {
   enemyMap = [
     [4, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 1, 4],
     [4, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 1, 4],
+    [4, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 1, 4],
     [4, 1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 1, 4],
     [4, 1, 2, 2, 2, 3, 3, 3 ,3, 3, 3 ,2, 2, 2, 1, 4],
     [4, 1, 2, 2, 2, 3, 3, 3 ,3, 3, 3 ,2, 2, 2, 1, 4],
@@ -13,17 +14,18 @@ export default class EnemyController {
     [4, 1, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 1, 4],
     [4, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 1, 4],
     [4, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 1, 4],
+    [4, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,2, 1, 4],
   ];
   enemyRows = [];
 
   currentDirection = MovingDirection.right;
   xVelocity = 0;
   yVelocity = 0;
-  defaultXVelocity = 3;
+  defaultXVelocity = 4;
   defaultYVelocity = 2;
   moveDownTimerDefault = 10;
   moveDownTimer = this.moveDownTimerDefault;
-  fireBulletTimerDefault = 30;
+  fireBulletTimerDefault = 20;
   fireBulletTimer = this.fireBulletTimerDefault;
 
   constructor(canvas, enemyBulletController, playerBulletController) {
