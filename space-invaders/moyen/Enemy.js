@@ -1,5 +1,5 @@
 var myAudio = document.createElement("audio");
-myAudio.src = "./sounds/backgroundMusic.wav";   
+myAudio.src = "./sounds/bg.wav";   
  
 export default class Enemy {
   constructor(x, y, imageNumber) {

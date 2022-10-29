@@ -2,11 +2,11 @@ export default class Player {
   rightPressed = false;
   leftPressed = false;
   shootPressed = false;
-  pausedPress = false;
 
-  constructor(canvas, velocity, bulletController, rotation) {
+
+  constructor(canvas, velocity, bulletController) {
     this.canvas = canvas;
-    this.velocity = velocity;
+    this.velocity = velocity + 2;
     this.bulletController = bulletController;
 
     this.x = this.canvas.width / 2;
@@ -43,10 +43,8 @@ export default class Player {
   move() {
     if (this.rightPressed) {
       this.x += this.velocity;
-      this.rotation = -0.15;
     } else if (this.leftPressed) {
       this.x += -this.velocity;
-      this.rotation = 0.15;
     }
   }
 
@@ -60,6 +58,9 @@ export default class Player {
     if (event.code == "Space") {
       this.shootPressed = true;
     }
+    if (event.code == "p") {
+      this.pausedPress = true;
+    }
   };
 
   keyup = (event) => {
@@ -71,9 +72,6 @@ export default class Player {
     }
     if (event.code == "Space") {
       this.shootPressed = false;
-    }
-    if (event.code == "p") {
-      this.paused = true;
     }
   };
 }

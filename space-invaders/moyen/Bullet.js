@@ -3,7 +3,7 @@ export default class Bullet {
     this.canvas = canvas;
     this.x = x;
     this.y = y;
-    this.velocity = velocity * 1.5;
+    this.velocity = velocity *2  ;
     this.bulletColor = bulletColor;
 
     this.width = 5;

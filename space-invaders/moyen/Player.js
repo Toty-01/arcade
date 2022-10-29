@@ -3,12 +3,10 @@ export default class Player {
   leftPressed = false;
   shootPressed = false;
 
-
   constructor(canvas, velocity, bulletController) {
     this.canvas = canvas;
-    this.velocity = velocity + 2;
+    this.velocity = velocity + 4;
     this.bulletController = bulletController;
-
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height - 75;
     this.width = 54;
@@ -19,7 +17,7 @@ export default class Player {
     document.addEventListener("keydown", this.keydown);
     document.addEventListener("keyup", this.keyup);
   }
-
+    
   draw(ctx) {
     if (this.shootPressed) {
       this.bulletController.shoot(this.x + this.width / 2, this.y, 4, 10);
@@ -34,12 +32,12 @@ export default class Player {
     if (this.x < 0) {
       this.x = 0;
     }
-
     //right
     if (this.x > this.canvas.width - this.width) {
       this.x = this.canvas.width - this.width;
     }
   }
+
   move() {
     if (this.rightPressed) {
       this.x += this.velocity;
@@ -57,9 +55,6 @@ export default class Player {
     }
     if (event.code == "Space") {
       this.shootPressed = true;
-    }
-    if (event.code == "p") {
-      this.pausedPress = true;
     }
   };
 

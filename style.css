@@ -5,6 +5,10 @@
    background-color: rgb(30, 29, 29);
    color: aliceblue;
 }
+.nav a img {
+   width: 6rem;
+   margin: 2rem;
+}
 .title {
    display: flex;
    width: 100%;
@@ -12,9 +16,28 @@
 }
 h1 {
    text-align: center;
-   margin: 4rem;
-   font-size: 6vw;
+   margin-bottom: 4rem;
+   font-size: 3rem;
 }
 h1 .fa-solid {
    margin-bottom: -0.8rem;
+}
+h2 {
+   text-align: center;
+}
+.card a {
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+.card a:hover {
+   transition: 1s;
+   transform: perspective(300px) rotateX(30deg);
+}
+@media screen and (max-width: 600px) {
+   .nav a {
+      display: flex;
+      justify-content: center;
+   }
 }
