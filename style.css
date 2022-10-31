@@ -1,13 +1,54 @@
 *, body, html {
    margin: 0;
    padding: 0;
-   overflow: hidden;
+   overflow-x: hidden;
    background-color: rgb(30, 29, 29);
    color: aliceblue;
 }
 .nav a img {
-   width: 6rem;
+   width: 5rem;
    margin: 2rem;
+}
+.nav a img:hover, .rotate-anim:hover {
+   animation:rotate-center .8s ease-in-out both
+}
+.card > a {
+   overflow: visible;
+   width: fit-content;
+   margin: 0 auto;
+}
+.pong-anim {
+   box-shadow: 2px 2px solid aliceblue;
+}
+.pong-anim:hover {
+   animation:rotate-vert-center .5s cubic-bezier(.455,.03,.515,.955) both;
+}
+@keyframes rotate-center{
+  0% {
+    transform:rotate(0)
+  }
+  100% {
+    transform:rotate(360deg)
+  }
+}
+@keyframes rotate-vert-center {
+   0% {
+      transform:rotateY(0)
+   } 100% {
+      transform:rotateY(360deg)
+   }
+}
+.pong-pic {
+   width: 12rem;
+}
+.card a {
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+.card p {
+   text-align: center;
 }
 .title {
    display: flex;
@@ -24,14 +65,9 @@ h1 .fa-solid {
 }
 h2 {
    text-align: center;
+   margin: 2rem;
 }
-.card a {
-   display: flex;
-   justify-content: center;
-   margin-top: 2rem;
-   margin-bottom: 2rem;
-}
-.card a:hover {
+.invad-img:hover {
    transition: 1s;
    transform: perspective(300px) rotateX(30deg);
 }

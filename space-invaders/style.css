@@ -5,7 +5,7 @@
   overflow-x: hidden;
 }
 body {
-  background-color: black;
+  background-color: rgb(30, 29, 29);
 }
 .nav {
   display: flex;
@@ -14,15 +14,27 @@ body {
    width: 5rem;
    margin: 2rem;
 }
+.nav a img:hover {
+   animation:rotate-center .8s ease-in-out both
+}
+@keyframes rotate-center{
+  0% {
+    transform:rotate(0)
+  }
+  100% {
+    transform:rotate(360deg)
+  }
+}
 .pieces {
   width: fit-content;
-  overflow: show;
+  overflow: show;align-items: center;
   display: flex;
   margin-left: auto;
   margin-right: 1rem;
 }
 .pieces > img {
-  width: 6rem;
+  width: 7rem;
+  height: 5rem;
   filter: 
   drop-shadow(0 0.25rem 0.80rem #fffb0e)
   drop-shadow(0 0.25rem 0.50rem #8a8942)
@@ -68,6 +80,8 @@ h1 {
 .levels {
   display: flex;
   flex-direction: column;
+  margin-bottom: 4rem;
+  overflow: visible;
 }
 .levels > a {
   overflow: visible;
