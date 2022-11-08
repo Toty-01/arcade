@@ -1,5 +1,6 @@
 var myAudio = document.createElement("audio");
-myAudio.src = "./sounds/bg.wav";   
+myAudio.src = "../facile/sounds/bg.wav";   
+myAudio.volume = 0.5 ;
  
 export default class Enemy {
   constructor(x, y, imageNumber) {
@@ -9,7 +10,7 @@ export default class Enemy {
     this.height = 30;
 
     this.image = new Image();
-    this.image.src = `images/enemy${imageNumber}.png`;
+    this.image.src = `../facile/images/enemy${imageNumber}.png`;
   }
 
   draw(ctx) {

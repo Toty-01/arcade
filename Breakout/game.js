@@ -4,11 +4,11 @@ const ctx = cvs.getContext("2d");
 
 cvs.style.border = "1px solid #0ff";
 
-ctx.lineWidth = 3;
+ctx.lineWidth = 1;
 
 const PADDLE_WIDTH = 100;
 const PADDLE_MARGIN_BOTTOM = 20;
-const PADDLE_HEIGHT = 20;
+const PADDLE_HEIGHT = 15;
 const BALL_RADIUS = 8;
 let LIFE = 3; // PLAYER HAS 3 LIVES
 let SCORE = 0;
@@ -24,7 +24,7 @@ const paddle = {
     y : cvs.height - PADDLE_MARGIN_BOTTOM - PADDLE_HEIGHT,
     width : PADDLE_WIDTH,
     height : PADDLE_HEIGHT,
-    dx :6
+    dx :5
 }
 
 function drawPaddle(){
@@ -127,12 +127,12 @@ function ballPaddleCollision(){
 
 const brick = {
     row : 2,
-    column : 5,
+    column : 6,
     width : 55,
     height : 20,
-    offSetLeft : 20,
-    offSetTop : 20,
-    marginTop : 25,
+    offSetLeft : 10,
+    offSetTop : 15,
+    marginTop : 15,
     fillColor : "#2e3548",
     strokeColor : "#FFF"
 }
@@ -188,7 +188,7 @@ function showGameStats(text, textX, textY, img, imgX, imgY){
     ctx.fillStyle = "#545680";
     ctx.font = "25px Audiowide";
     ctx.fillText(text, textX, textY);
-    ctx.drawImage(img, imgX, imgY, width = 25, height = 25);
+    ctx.drawImage(img, imgX, imgY, width = 23, height = 23);
 }
 
 function draw(){
@@ -199,7 +199,6 @@ function draw(){
     showGameStats(LIFE, cvs.width - 25, 25, LIFE_IMG, cvs.width-55, 5); 
     showGameStats(LEVEL, cvs.width/2, 25, LEVEL_IMG, cvs.width/2 - 30, 5);
 }
-
 function gameOver(){
     if(LIFE <= 0){
         showYouLose();
@@ -223,7 +222,7 @@ function levelUp(){
         }
         brick.row++;
         createBricks();
-        ball.speed += 0.5;
+        ball.speed += 0.4;
         resetBall();
         LEVEL++;
     }

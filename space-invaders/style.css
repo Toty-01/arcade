@@ -45,20 +45,20 @@ h1 {
   margin-bottom: 10vh;
   font-size: 8vh;
   color: aliceblue;
-  border: 2px solid white;
+  border: 2px solid rgba(249, 28, 28, 0.557);
   width: fit-content;
   padding: 1.5rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 1rem;
   box-shadow: 
-  .125vw 0vw .25vw #ff7474,
+  .125vh 0vw .25vh #ff7474,
   
-  .15vw 0vw 2vw #ff3131,
+  .15vh 0vw 2vh #ff3131,
   
-  .15vw 0vw 10vw #fb0404;;
+  .15vh 0vw 10vh #fb0404;;
   text-shadow: 
-  .1vw 0vw .25vw #ff7474,
+  .1vw 0vw .25vw #ff0000,
   .125vw 0vw .25vw #ff7474,
   
   .1vw 0vw .1vw #ff3131,
@@ -97,23 +97,23 @@ h1 {
   text-align: center;
   color: white;
   text-shadow: 
-  .1vw 0vw .25vw #7476ff,
-  .15vw 0vw .25vw #7476ff,
+  .1vh 0vw .25vh #7476ff,
+  .15vh 0vw .25vh #7476ff,
   
-  .1vw 0vw .1vw #3134ff,
-  .15vw 0vw .1vw #3134ff,
-  .4vw 0vw .1vw #3134ff,
+  .1vh 0vw .1vh #3134ff,
+  .15vh 0vw .1vh #3134ff,
+  .4vh 0vw .1vh #3134ff,
   
-  .1vw 0vw 1vw #0428fb,
-  .4vw 0vw 5vw #0428fb,
+  .1vh 0vw 1vh #0428fb,
+  .4vh 0vw 5vh #0428fb,
   
-  .1vw 0vw 5vw #0428fb,
-  .15vw 0vw 20vw #0428fb,
-  .4vw 0vw 10vw #0428fb,
+  .1vh 0vw 5vh #0428fb,
+  .15vh 0vw 20vh #0428fb,
+  .4vh 0vw 10vh #0428fb,
 
-  .1vw 0vw 10vw #0428fb,
-  .15vw 0vw 30vw #0428fb,
-  .4vw 0vw 10vw #0428fb;
+  .1vh 0vw 10vh #0428fb,
+  .15vh 0vw 30vh #0428fb,
+  .4vh 0vw 10vh #0428fb;
 }
 .levels > a:after {
   content: '';
