@@ -9,9 +9,6 @@
    width: 5rem;
    margin: 2rem;
 }
-.nav a img:hover, .rotate-anim:hover {
-   animation:rotate-center .8s ease-in-out both
-}
 h1 {
    text-align: center;
    margin-bottom: 4rem;
@@ -67,23 +64,89 @@ h2 {
    .15vh 0vw 6vh #0429fb;
    overflow: visible;
 }
+.title {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+}
+.nav a img:hover, .rotate-anim:hover, .break:hover, .pong-pic:hover  {
+   animation:rotate-center .8s ease-in-out both
+}
+.game {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-wrap: wrap;
+}
 .card > a {
    overflow: visible;
    width: fit-content;
    margin: 0 auto;
 }
-.card > p {
-   font-size: 1.5rem;
-}
-.break {
-   width: 14rem;
-}
 .pong-anim {
    box-shadow: 2px 2px solid aliceblue;
 }
-.pong-anim:hover {
-   animation:rotate-vert-center .5s cubic-bezier(.455,.03,.515,.955) both;
+.game p {
+   font-size: 3rem;
+   margin: 2rem;
+   text-shadow: 
+   .1vh 0vw .25vh #d266ce,
+   .125vh 0vw .25vh #d266ce,
+   
+   .1vh 0vw .1vh #da3fd5,
+   .125vh 0vw .1vh #da3fd5,
+   .15vh 0vw .1vh #da3fd5,
+   
+   .1vh 0vw 2vh #da3fd5,
+   .125vh 0vw 2vh #da3fd5,
+   .15vh 0vw 2vh #da3fd5,
+   
+   .1vh 0vw 1vh #fb04f3,
+   .125vh 0vw 1vh #fb04f3,
+   .15vh 0vw 5vh #fb04f3,
+   
+   .1vh 0vw 5vh #fb04f3,
+   .125vh 0vw 2vh #fb04f3,
+   .15vh 0vw 6vh #fb04f3;
+   overflow: visible;
 }
+.card a {
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+.card p {
+   text-align: center;
+}
+.invad-img:hover {
+   transition: 1s;
+   transform: perspective(300px) rotateX(30deg);
+}
+.arcades {
+   display: flex;
+   position: relative;
+   justify-content: center;
+}
+.break, .pong-pic, .invad-img {
+   width: 10.6rem;
+   height: 9rem;
+   position: absolute;
+   margin-left: -31.4rem;
+   margin-top: 4rem;
+   z-index: 2;
+}
+.sep {
+   border-top: 6px solid #fb0404;
+   width: 75%;
+   border-radius: 1rem;
+   margin: 0 auto;
+}
+.sep:hover {
+   transition: all 1.5s;
+   width: 100%;
+}
+/*-----------anim-------------*/
 @keyframes rotate-center{
   0% {
     transform:rotate(0)
@@ -99,30 +162,21 @@ h2 {
       transform:rotateY(360deg)
    }
 }
-.pong-pic {
-   width: 12rem;
-}
-.card a {
-   display: flex;
-   justify-content: center;
-   margin-top: 2rem;
-   margin-bottom: 2rem;
-}
-.card p {
-   text-align: center;
-}
-.title {
-   display: flex;
-   width: 100%;
-   justify-content: center;
-}
-.invad-img:hover {
-   transition: 1s;
-   transform: perspective(300px) rotateX(30deg);
-}
+/*---------------mobile-------------------*/
 @media screen and (max-width: 600px) {
    .nav a {
       display: flex;
       justify-content: center;
+   }
+   .arcade {
+      width: 23rem;
+   }
+   .break, .pong-pic, .invad-img {
+      width: 8rem;
+      height: 6rem;
+      position: absolute;
+      margin-left: -22.4rem;
+      margin-top: 2.8rem;
+      z-index: 2;
    }
 }

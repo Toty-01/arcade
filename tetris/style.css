@@ -1,0 +1,27 @@
+
+button:hover {
+  background-color: #bca0dc !important;
+}
+button:active {
+  background-color: #9969d0 !important;
+}
+#scoreCanvas {
+  position: absolute; 
+  top: 220;
+}
+#nextShapeCanvas {
+  position: absolute; 
+  top: 10;
+  width: 220px;
+  height: 200px;
+}
+
+/*
+barre orange
+assi gauche bleu foncé
+carré violet
+L allongé droite bleu ciel
+jule vert
+assis droite rouge
+L allongé gauche jaune
+*/
