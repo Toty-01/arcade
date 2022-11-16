@@ -1,27 +1,53 @@
-
+body {
+  overflow-x: hidden;
+}
+button {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: gray;
+  border: 0px;
+  left: 20%;
+  top: 25%;
+}
 button:hover {
-  background-color: #bca0dc !important;
+  background-color: #b0b0b0 !important;
+  cursor: pointer;
 }
 button:active {
-  background-color: #9969d0 !important;
+  background-color: #b0b0b0 !important;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#scoreCanvas, #nextShapeCanvas, .btn {
+  position: absolute;
 }
 #scoreCanvas {
-  position: absolute; 
-  top: 220;
+  height: 12rem;
+  width: 20rem;
+  top: 5%;
+  left: 80%;
 }
 #nextShapeCanvas {
-  position: absolute; 
-  top: 10;
-  width: 220px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
+  top: 5%;
+  left: 20%;
 }
-
-/*
-barre orange
-assi gauche bleu foncé
-carré violet
-L allongé droite bleu ciel
-jule vert
-assis droite rouge
-L allongé gauche jaune
-*/
+@media screen and (max-width: 800px) {
+  #scoreCanvas {
+    left: 60%;
+    top: 1rem;
+  }
+  #nextShapeCanvas {
+    left: 10%;
+    top: 1rem;
+  }
+  button {
+    left: 15%;
+    top: 20%;
+  }
+}

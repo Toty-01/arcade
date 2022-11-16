@@ -175,7 +175,7 @@ let currentShape;
 let nextShape;
 let score;
 let initialTwoDArr;
-let whiteLineThickness = 4;
+let whiteLineThickness = 3;
 
 let gameLoop = () => {
   setInterval(update, 1000 / gameSpeed);
@@ -234,7 +234,7 @@ let drawRect = (x, y, width, height, color) => {
 };
 
 let drawBackground = () => {
-  drawRect(0, 0, canvas.width, canvas.height, "#bca0dc");
+  drawRect(0, 0, canvas.width, canvas.height, "#b0b0b0");
   for (let i = 0; i < squareCountX + 1; i++) {
     drawRect(
       size * i - whiteLineThickness,
@@ -296,7 +296,7 @@ let drawSquares = () => {
 };
 
 let drawNextShape = () => {
-  nctx.fillStyle = "#bca0dc";
+  nctx.fillStyle = "#b0b0b0";
   nctx.fillRect(0, 0, nextShapeCanvas.width, nextShapeCanvas.height);
   for (let i = 0; i < nextShape.template.length; i++) {
     for (let j = 0; j < nextShape.template.length; j++) {
@@ -323,10 +323,16 @@ let drawScore = () => {
   sctx.fillText(score, 10, 50);
 };
 
+const gameOverMenu = document.getElementById("gameover");
+function menu() {
+  gameOverMenu.style.display = "block";
+}
+
 let drawGameOver = () => {
   ctx.font = "64px Poppins";
   ctx.fillStyle = "black";
-  ctx.fillText("Game Over!", 10, canvas.height / 2);
+  ctx.fillText("Game Over !", 10, canvas.height / 2);
+  ctx.fillText(menu());
 };
 
 let draw = () => {
