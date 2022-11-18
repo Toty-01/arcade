@@ -25,7 +25,7 @@ const ball = {
     color : "RED"
 }
 const user = {
-    x : 0,
+    x : 5,
     y : (canvas.height - 100)/2,
     width : 10,
     height : 100,
@@ -33,7 +33,7 @@ const user = {
     color : "BLUE"
 }
 const com = {
-    x : canvas.width - 10,
+    x : canvas.width - 15,
     y : (canvas.height - 100)/2, 
     width : 10,
     height : 100,
@@ -153,6 +153,13 @@ function game(){
     update();
     render();
 }
+function pause() {
+    alert("jeu en pause");
+}
+window.addEventListener("keydown", (event) => {
+ if (event.keyCode == 32) pause();
+});
+
 let framePerSecond = 50;
 
 let loop = setInterval(game,1000/framePerSecond);

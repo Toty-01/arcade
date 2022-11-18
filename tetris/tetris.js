@@ -318,18 +318,21 @@ let drawNextShape = () => {
 
 let drawScore = () => {
   sctx.clearRect(0, 0, scoreCanvas.width, scoreCanvas.height);
-  sctx.font = "64px Poppins";
-  sctx.fillStyle = "black";
+  sctx.font = "64px Roboto";
+  sctx.fillStyle = "white";
   sctx.fillText(score, 10, 50);
 };
 
-const gameOverMenu = document.getElementById("gameover");
+let gameOverMenu = document.getElementById("gameover");
 function menu() {
   gameOverMenu.style.display = "block";
 }
+function hidemenu() {
+  gameOverMenu.style.display = "none";
+}
 
 let drawGameOver = () => {
-  ctx.font = "64px Poppins";
+  ctx.font = "64px Roboto";
   ctx.fillStyle = "black";
   ctx.fillText("Game Over !", 10, canvas.height / 2);
   ctx.fillText(menu());
@@ -351,6 +354,7 @@ let getRandomShape = () => {
   return Object.create(shapes[Math.floor(Math.random() * shapes.length)]);
 };
 let resetVars = () => {
+  hidemenu();
   initialTwoDArr = [];
   for (let i = 0; i < squareCountY; i++) {
     let temp = [];
@@ -366,11 +370,16 @@ let resetVars = () => {
   gameMap = initialTwoDArr;
 };
 
+function pause() {
+  alert("Jeu en pause");
+}
+
 window.addEventListener("keydown", (event) => {
   if (event.keyCode == 37) currentShape.moveLeft();
   else if (event.keyCode == 32) currentShape.changeRotation();
   else if (event.keyCode == 39) currentShape.moveRight();
   else if (event.keyCode == 40) currentShape.moveBottom();
+  else if (event.keyCode == 80) pause();
 });
 
 resetVars();

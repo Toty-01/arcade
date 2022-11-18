@@ -26,6 +26,13 @@ let didWin = false;
 const audio = document.createElement('audio');
     audio.setAttribute('src','./sounds/gameOver.mp3');
 
+function pause() {
+  alert("jeu en pause");
+}
+window.addEventListener("keydown", (event) => {
+  if (event.keyCode == 13 ) pause();
+});
+
 function game() {
   checkGameOver();
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);

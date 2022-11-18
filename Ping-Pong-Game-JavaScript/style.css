@@ -1,0 +1,29 @@
+*, body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: rgb(255, 145, 0);
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border-radius: 0.6rem;
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  border: 2px solid;
+  background-color: rgba(0, 0, 0, 0.64);
+  transform: translate(-50%);
+}
+a:hover {
+  transition: all 0.4s;
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.882);
+}

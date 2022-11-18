@@ -14,7 +14,7 @@ let LIFE = 3; // PLAYER HAS 3 LIVES
 let SCORE = 0;
 const SCORE_UNIT = 10;
 let LEVEL = 1;
-const MAX_LEVEL = 3;
+const MAX_LEVEL = 4;
 let GAME_OVER = false;
 let leftArrow = false;
 let rightArrow = false;
@@ -205,6 +205,13 @@ function gameOver(){
         GAME_OVER = true;
     }
 }
+
+function pause() {
+    alert("jeu en pause");
+  }
+  window.addEventListener("keydown", (event) => {
+    if (event.keyCode == 32 ) pause();
+  });
 
 function levelUp(){
     let isLevelDone = true;

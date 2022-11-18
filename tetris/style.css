@@ -1,5 +1,6 @@
 body {
   overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.785);
 }
 button {
   width: 64px;
@@ -36,6 +37,24 @@ button:active {
   height: 140px;
   top: 5%;
   left: 20%;
+}
+#gameover {
+  position: absolute;
+  left: 40%;
+  top: 60%;
+}
+#gameover a {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.579);
+  border: 2px solid;
+  padding: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 0.3rem;
+}
+#gameover a:hover {
+  color: orangered;
 }
 @media screen and (max-width: 800px) {
   #scoreCanvas {
