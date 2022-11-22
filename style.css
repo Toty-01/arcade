@@ -2,8 +2,11 @@
    margin: 0;
    padding: 0;
    overflow-x: hidden;
-   background-color: rgb(30, 29, 29);
+   background-color: rgb(23, 23, 23);
    color: aliceblue;
+}
+body {
+   background-image: url(./space-invaders/facile/images/stars.png);
 }
 .nav a img {
    width: 5rem;
@@ -40,6 +43,7 @@ h1 .fa-solid {
    margin-bottom: -0.8rem;
 }
 h2 {
+   background-image: url(./space-invaders/facile/images/stars.png);
    text-align: center;
    margin: 2rem;
    margin-top: 4rem;
@@ -66,13 +70,50 @@ h2 {
    .15vh 0vw 6vh #0429fb;
    overflow: visible;
 }
-.title {
+.title > h1{
    display: flex;
    width: 100%;
    justify-content: center;
 }
+.anim {
+   width: 100%;
+   overflow: visible;
+}
+.anim img:first-child {
+  height: 8rem;
+  margin-left: 20%;
+  animation: jump 4s ease-in-out infinite;
+  z-index: 100;
+}
+.anim img:last-child {
+  height: 4rem;
+  position: absolute;
+  width: auto;
+  top: 24rem;
+  right: -4rem;
+  animation: translate-carap 4s ease infinite;
+}
+@keyframes jump {
+   0% {
+     transform: translateY(0);
+   }
+   50% {
+      transform: translateY(-6rem);
+   }
+   100% {
+     transform: translateY(0px);
+   }
+}
+@keyframes translate-carap {
+   from {
+    transform: translateX(0);
+   }
+   to {
+     transform: translateX(-1400px);
+   }
+}
 .nav a img:hover, .rotate-anim:hover, .break:hover, .pong-pic:hover  {
-   animation:rotate-center .8s ease-in-out both
+   animation: rotate-center .8s ease-in-out both;
 }
 .game {
    display: flex;
@@ -130,7 +171,25 @@ h2 {
    position: relative;
    justify-content: center;
 }
-.break, .pong-pic, .invad-img {
+.arcades > i {
+   position: absolute;
+   margin-top: 15.45rem;
+   margin-left: -3.55rem;
+   background-color: #fb0404;
+   border-radius: 50%;
+   height: 12px;
+   width: 12px;
+}
+.arcades > i:last-child {
+   position: absolute;
+   margin-top: 15.45rem;
+   margin-left: 9.88rem;
+   background-color: #fb0404;
+   border-radius: 50%;
+   height: 12px;
+   width: 12px;
+}
+.break, .pong-pic, .invad-img, .dice {
    width: 10.6rem;
    height: 9rem;
    position: absolute;
@@ -140,7 +199,7 @@ h2 {
 }
 .sep {
    border-top: 6px solid #fb0404;
-   width: 75%;
+   width: 70%;
    border-radius: 1rem;
    margin: 0 auto;
 }
@@ -180,5 +239,39 @@ h2 {
       margin-left: -22.4rem;
       margin-top: 2.8rem;
       z-index: 2;
+   }
+   .arcades > i {
+      margin-top: 11.1rem;
+      margin-left: -2.5rem;
+      height: 10px;
+      width: 10px;
+   }
+   .arcades > i:last-child {
+      margin-top: 11.1rem;
+      margin-left: 7.15rem;
+      height: 10px;
+      width: 10px;
+   }
+   .anim img:first-child {
+     height: 8rem;
+     margin-left: 100%;
+     animation: translate-anim 5s ease-out infinite;
+     z-index: 100;
+   }
+   .anim img:last-child {
+     height: 4rem;
+     position: absolute;
+     width: auto;
+     top: 23.5rem;
+     right: -20rem;
+     animation: translate-anim 5s ease-out infinite;
+   }
+}
+@keyframes translate-anim {
+   from {
+    transform: translateX(0);
+   }
+   to {
+     transform: translateX(-800px);
    }
 }

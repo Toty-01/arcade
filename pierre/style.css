@@ -1,0 +1,130 @@
+:root {
+  --primary: #40ff00;
+  --secondary: #ff0000;
+  --back: #f1f1f1;
+  --action: #ff6565;
+  --border-radius: 15px;
+  --btn-padding: 20px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--back);
+  font-family: sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav a img {
+  width: 5rem;
+  margin: 1rem;
+}
+.score {
+  margin-top: 20px;
+  margin-bottom: 1rem;
+  display: flex;
+  width: 350px;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 35px;
+  background-color: white;
+  padding: var(--btn-padding);
+  border-radius: 15px;
+}
+.btn {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ff6565;
+  color: #f1f1f1;
+  margin-bottom: 1rem;
+}
+#reset {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  padding: 0.8rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border-radius: 0.5rem;
+  background-color: #ff6565;
+  color: #f1f1f1;
+}
+#reset:hover {
+  transition: all 0.5s;
+  color: grey;
+}
+.action {
+  margin-bottom: 40px;
+  text-align: center;
+}
+#message {
+  font-size: 25px;
+}
+#next {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: var(--action);
+  color: white;
+  border-radius: var(--border-radius);
+  visibility: hidden;
+  cursor: pointer;
+}
+#next.active {
+  visibility: visible;
+}
+.jeu {
+  border-top: 1px solid black;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  padding: var(--btn-padding);
+}
+.btn-joueur,
+.btn-ordi {
+  border-radius: 15px;
+  transition: all 0.2s ease;
+}
+.btn-joueur {
+  cursor: pointer;
+  background-color: white;
+}
+.btn-joueur:hover {
+  color: var(--primary);
+}
+.button img {
+  height: 64px;
+}
+.button p {
+  margin-left: 20px;
+}
+.button:not(:last-child) {
+  margin-bottom: 40px;
+}
+.btn-joueur.desactivated {
+  background-color: var(--back);
+  cursor: default;
+}
+
+.btn-joueur.desactivated:hover,
+.btn-joueur.active {
+  color: inherit;
+}
+
+.btn-joueur.active {
+  background-color: var(--primary);
+}
+
+.btn-ordi.active {
+  background-color: var(--secondary);
+}

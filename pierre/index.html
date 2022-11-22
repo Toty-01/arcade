@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pierre papiers ciseaux</title>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="../index.html"><img src="../img/manete.png" alt=""></a>
+  </div>
+
+  <div class="score">
+
+    <div class="player">
+      <h4 class="Player1">Moi</h4>
+      <p id="score-joueur">0</p>
+    </div>
+
+    <div class="computer">
+      <h4>Ordi</h4>
+      <p id="score-ordinateur">0</p>
+    </div>
+
+  </div>
+
+    <button type="button" class="btn" onClick="editNames()">
+      <i class="fa-sharp fa-solid fa-file-pen"></i>  
+      EDITER NOM
+    </button>
+
+    <div id="reset">Reset</div>
+
+<div class="action">
+    <p id="message">A vous de jouer !</p>
+    <div id="next">Tour suivant</div>
+</div>
+
+<div class="jeu">
+
+    <div class="choix">
+        <div class="button btn-joueur" id="pierre">
+            <i class="fa-sharp fa-solid fa-hand-fist"></i>
+            <p>Pierre</p>
+        </div>
+        <div class="button btn-joueur" id="feuille">
+            <i class="fa-sharp fa-solid fa-hand"></i>
+            <p>Feuille</p>
+        </div>
+        <div class="button btn-joueur" id="ciseaux">
+            <i class="fa-sharp fa-solid fa-hand-scissors"></i>
+            <p>Ciseaux</p>
+        </div>
+    </div>
+
+    <div class="choix">
+        <div class="button btn-ordi" id="opierre">
+          <i class="fa-sharp fa-solid fa-hand-fist"></i>
+            <p>Pierre</p>
+        </div>
+        <div class="button btn-ordi" id="ofeuille">
+          <i class="fa-sharp fa-solid fa-hand"></i>
+            <p>Feuille</p>
+        </div>
+        <div class="button btn-ordi" id="ociseaux">
+            <i class="fa-sharp fa-solid fa-hand-scissors"></i>
+            <p>Ciseaux</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
