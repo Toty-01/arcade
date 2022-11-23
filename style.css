@@ -7,10 +7,25 @@
 }
 body {
    background-image: url(./space-invaders/facile/images/stars.png);
+   overflow: hidden;
+}
+.nav {
+   display: flex;
+   width: 100%;
+}
+.nav a {
+   display: flex;
+   align-items: center;
+   margin-left: auto;
 }
 .nav a img {
    width: 5rem;
-   margin: 2rem;
+}
+.nav img {
+   width: 100px;
+}
+.nav img:last-child {
+   margin-left: auto;
 }
 h1 {
    text-align: center;
@@ -77,40 +92,17 @@ h2 {
 }
 .anim {
    width: 100%;
-   overflow: visible;
+   display: flex;
+   align-items: flex-end;
 }
-.anim img:first-child {
-  height: 8rem;
-  margin-left: 20%;
-  animation: jump 4s ease-in-out infinite;
+.anim img {
+  height: 10rem;
+  margin-left: 10%;
   z-index: 100;
 }
 .anim img:last-child {
-  height: 4rem;
-  position: absolute;
-  width: auto;
-  top: 24rem;
-  right: -4rem;
-  animation: translate-carap 4s ease infinite;
-}
-@keyframes jump {
-   0% {
-     transform: translateY(0);
-   }
-   50% {
-      transform: translateY(-6rem);
-   }
-   100% {
-     transform: translateY(0px);
-   }
-}
-@keyframes translate-carap {
-   from {
-    transform: translateX(0);
-   }
-   to {
-     transform: translateX(-1400px);
-   }
+  height: 3rem;
+  margin-bottom: 2rem;
 }
 .nav a img:hover, .rotate-anim:hover, .break:hover, .pong-pic:hover  {
    animation: rotate-center .8s ease-in-out both;
@@ -175,7 +167,7 @@ h2 {
    position: absolute;
    margin-top: 15.45rem;
    margin-left: -3.55rem;
-   background-color: #fb0404;
+   background-color: #fbe204c4;
    border-radius: 50%;
    height: 12px;
    width: 12px;
@@ -184,7 +176,7 @@ h2 {
    position: absolute;
    margin-top: 15.45rem;
    margin-left: 9.88rem;
-   background-color: #fb0404;
+   background-color: #fbe204c4;
    border-radius: 50%;
    height: 12px;
    width: 12px;
@@ -206,6 +198,20 @@ h2 {
 .sep:hover {
    transition: all 1.5s;
    width: 100%;
+}
+/*-----------------footer------------------*/
+footer {
+   width: 100%;
+}
+.footer-imgs {
+   width: 100%;
+   display: flex;
+}
+.footer-imgs img {
+   width: 100px;
+}
+.footer-imgs img:last-child {
+   margin-left: auto;
 }
 /*-----------anim-------------*/
 @keyframes rotate-center{
@@ -251,27 +257,5 @@ h2 {
       margin-left: 7.15rem;
       height: 10px;
       width: 10px;
-   }
-   .anim img:first-child {
-     height: 8rem;
-     margin-left: 100%;
-     animation: translate-anim 5s ease-out infinite;
-     z-index: 100;
-   }
-   .anim img:last-child {
-     height: 4rem;
-     position: absolute;
-     width: auto;
-     top: 23.5rem;
-     right: -20rem;
-     animation: translate-anim 5s ease-out infinite;
-   }
-}
-@keyframes translate-anim {
-   from {
-    transform: translateX(0);
-   }
-   to {
-     transform: translateX(-800px);
    }
 }
