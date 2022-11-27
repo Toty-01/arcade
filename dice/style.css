@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Abril Fatface', cursive;
+  font-family: 'Fjalla One', sans-serif;
+}
+.game-body {
+  overflow-y: auto;
+  border: solid 10px #fd4141;
+  border-radius: .5rem;
+  width: 95vw;
+  height: 95vh;
+  margin-left: 2.5vw;
+  margin-top: 2vh;
+  background: beige;
+}
+#new-game {
+  margin-top: 5vh !important;
+}
+.png-btn {
+  width: 30px;
+  vertical-align: -6px;
+}
+.btn {
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+}
+.btn:hover {
+  transition: all 0.4s;
+  background: #fd4141;
+  text-decoration: none;
+  color: #ffffff;
+  top: 3px;
+  left: 2px;
+}
+.Score-bottom {
+  width: 120px;
+  height: 100px;
+  background-color: #fd4141;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+.current-score-pl2, .current-score-pl1{
+  color: #ffffff;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+.img-dice {
+  width: 100px;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: lighter;
+  background-color: #000000;
+  border-radius: 1rem;
+  color: #ffffff;
+  border: solid #fd4141 4px;
+}
+.total-score-pl2, .total-score-pl1 {
+  color: red;
+  font-size: 4rem;
+  font-weight: lighter;
+} 
+.Score-bottom p {
+  text-align: center;
+}
+button > i {
+  margin-bottom: -0.25rem;
+}
+@media screen and (max-width:650px) {
+  *{
+    overflow: visible;
+  }
+  .game-body {
+    overflow: auto;
+    border: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .row {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .col {
+    margin-bottom: 2rem;
+  }
+}

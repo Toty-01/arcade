@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="jeux de dé multijoueurs. Atteignez le score de 50 mais attention, 
+  sauvegardez votre score a temps car si le dé tombe sur le 1, c est à l autre joueur de lancer le dé et votre score n'est pas retenu. Bonne chance à vous !!">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>Dice game</title>
+</head>
+<body>
+
+<div class="game-body">
+
+  <button class="btn btn-light shadow mx-auto p-3 mb-4 mx-auto d-block" type="button" id="new-game">
+    <i class="fa-solid fa-circle-plus"></i>
+    NEW GAME
+  </button>
+
+  <button type="button" class="btn btn-light d-block p-3 shadow mt-2 mx-auto mb-3" id="rules">
+    Rules
+  </button>
+
+    <div class="row">
+
+        <div class="col">
+          <h2 class="Player1 text-center" id="select-player-1">PLAYER 1</h2>
+          <p class="total-score-pl1 mt-3 text-center" id="score-player-1">0</p>
+            <div class="Score-bottom mt-5 mx-auto">
+              <p>current</p>
+              <p class="current-score-pl1" id="dice-result-1">0</p>
+            </div>
+        </div>
+
+      <div class="col">
+        <div class="dice mx-auto mt-3">
+          <img class="img-dice mx-auto d-block" src="./img/dice1.png" id="img-result">
+        </div>
+
+        <button type="button" class="btn btn-light d-block p-3 shadow mt-5 mx-auto" id="roll-dice">
+          <i class="fa-solid fa-rotate"></i>
+          ROLL DICE
+        </button>
+
+        <button type="button" class="btn btn-light d-block p-3 shadow mt-3 mx-auto" id="add-to-score">
+          <i class="fa-solid fa-floppy-disk"></i>
+          HOLD
+        </button>
+
+        <button type="button" class="btn btn-light d-block p-3 shadow mb-3 mt-3 mx-auto" onClick="editNames()">
+          <i class="fa-regular fa-pen-to-square"></i>   
+          EDIT NAMES
+        </button>
+      </div>
+
+      <div class="col">
+        <h2 class="Player2 text-center" id="select-player-2">PLAYER 2</h2>
+        <p class="total-score-pl2 mt-3 text-center" id="score-player-2">0</p>
+          <div class="Score-bottom mt-5 mx-auto">
+            <p>CURRENT</p>
+            <p class="current-score-pl2"  id="dice-result-2">0</p>
+          </div>
+      </div>
+    </div>
+</div>
+<script src="script.js"></script> 
+</body>
+</html>
